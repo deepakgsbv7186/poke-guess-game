@@ -1,8 +1,3 @@
-# React + Vite
+# PokeQuiz | Who's That Pokemon?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to PokeQuiz, a fun and interactive game built with React! Challenge your knowledge of Pokemon names by guessing the correct one from a set of options. Each round brings a new Pokemon to identify, earning points for correct guesses. The game features a responsive design and a delightful user interface for an engaging experience. Start playing now and become a PokeQuiz Master!

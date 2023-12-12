@@ -1,12 +1,11 @@
-import { useState } from "react";
-
 export default function FourOptions({
   pokeOptions,
   onSelectOption,
   correctOption,
+  selectedOption,
+  setSelectedOption,
 }) {
-  const [selectedOption, setSelectedOption] = useState(null);
-
+  // const minLength = 5;
   const handleSelect = (pokemonName) => {
     setSelectedOption(pokemonName);
     onSelectOption(pokemonName);
@@ -27,21 +26,25 @@ export default function FourOptions({
       return "bg-slate-50 text-slate-800 hover:text-slate-100 hover:bg-slate-800 cursor-pointer";
     }
   };
-
+  // const sliceLongName = (pokeName) =>
+  //   pokeName.length > minLength
+  //     ? `${pokeName.slice(0, minLength - 1)}...`
+  //     : pokeName;
   return (
-    <>
+    <div className="flex flex-wrap justify-between items-center h-[100%] w-[100%]">
       {pokeOptions?.map((pokemon) => (
         <button
           key={pokemon?.name}
-          className={`w-[100%] font-semibold capitalize p-2 mb-2 rounded-md ${getButtonStyle(
+          className={`w-[49%] font-semibold capitalize p-2 mb-2 rounded-md ${getButtonStyle(
             pokemon?.name
           )}`}
           onClick={() => handleSelect(pokemon?.name)}
           disabled={selectedOption !== null}
         >
           {pokemon?.name}
+          {/* {sliceLongName(pokemon?.name)} */}
         </button>
       ))}
-    </>
+    </div>
   );
 }

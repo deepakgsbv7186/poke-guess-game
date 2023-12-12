@@ -1,5 +1,4 @@
 export default function PokeImg({ displayPokemon }) {
-  console.log("displayPokemondisplayPokemon", displayPokemon);
   return (
     <>
       <img
